@@ -23,19 +23,31 @@ df_midterm
 df_midterm <- rbind(df_midterm, data.frame(english=50, math=50, class=3, name="멀린", age=30))
 df_midterm
 
+# 데이터프레임 한 번에 만들기
 df_midterm2 <- data.frame(english2 = c(90, 80, 70, 60),
                           math2 = c(55, 66, 77, 88),
                           class2 = c(1,1,2,2),
                           name2 = c("유비", "관우","장비","조자룡"))
 
 english2 # 에러발생. 데이터 프레임의 컬럼으로만 사용되었음.
-#데이터프레임 출력
-df_midterm2
-#여기서는 영어 컬럼이 출력됨. 컬럼명을 기술할때는 $를 사용함.
-df_midterm2$english2
+df_midterm2 #데이터프레임 출력
+df_midterm2$english2 #여기서는 영어 컬럼이 출력됨. 컬럼명을 기술할때는 $를 사용함.
 
 #간단한 분석
 # 영어의 평균
 mean(df_midterm2$english2)
 # 수학의 최대값
 max(df_midterm2$math2)
+
+# 컬럼 삭제1 : - 부호를 붙여 이 컬럼을 제외한 나머지를 선택하라는 의미
+# 즉 선택한 컬럼이 삭제된다.
+df_midterm2 <- subset(df_midterm2, select=-class2)
+df_midterm2
+
+# 컬럼 삭제2 : 컬럼 선택 후 Null을 할당
+df_midterm2$name2 <- NULL
+df_midterm2
+
+# 컬럼 삭제3 : 1번 인덱스 컬럼 삭제
+df_midterm2 <- df_midterm2[, -1]
+df_midterm2

@@ -14,7 +14,7 @@ save(df_csv_exam1, file = "./saveFiles/test.rda")
 rm(df_csv_exam1)
 df_csv_exam1
 
-# 저당된 rda 데이터 파일 불러오기
+# 저장된 rda 데이터 파일 불러오기
 # 변수명을 별도로 지정하지않아도, 저장에 사용된 변수명으로 로드하게된다.
-laad("./saveFiles/test.rda")
+load("./saveFiles/test.rda")
 df_csv_exam1

@@ -1,7 +1,7 @@
 # 데이터 파일 읽기
 
 # 작업 디렉토리 지정 및 확인
-# 우리의 워크스페이스로 작업디렉토리르 지정해야 하위 경로를 정학히 인식한다.
+# 우리의 워크스페이스로 작업디렉토리르 지정해야 하위 경로를 정확히 인식한다.
 setwd("C:/workspace/R")
 getwd()
 
@@ -10,7 +10,7 @@ df_txt_exam1 <- read.table("./resData/txt_exam1.txt", header=1)
 df_txt_exam1
 
 # 구분자가 , 인 파일 읽어오기. 탭이면 \t 로 작성
-df_txt_exam2 <- read.table("/resData/txt_exam2.txt", sep = ",")
+df_txt_exam2 <- read.table("./resData/txt_exam2.txt", sep = ",")
 df_txt_exam2
 
 #컬럼며잉 없는 파일 읽어오기
@@ -38,7 +38,7 @@ df_csv_exam3 <- read.csv("./resData/csv_exam3.csv", sep="|", header = F)
 df_csv_exam3
 
 # 컬럼명 변경하기
-names(df_csv_exam) <- c("id","class","math","english", "science")
+names(df_csv_exam3) <- c("id","class","math","english", "science")
 df_csv_exam3
 
 #----------------------------------------------

@@ -68,4 +68,3 @@ barplot(grade_table,
         names.arg = c("A", "B", "C", "D"),
         ylab = "빈도",
         xlab = "등급")
-

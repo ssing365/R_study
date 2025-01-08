@@ -23,4 +23,4 @@ qplot(x, y, mian = "Scatter Plot", xlab = "X-axis", ylab = "Y-axis")
 
 # 히스토그램 생성
 data <- rnorm(1000)
-qplot(data, geom = "histogram", binwidth = 0.2, main= "Histogram", xlab = "Values", ylab = "Frequency", fill=I("lightblue"), col = I("black"))
+qplot(data, geom = "histogram", binwidth = 0.2, main= "Histogram", xlab = "Values", ylab = "Frequency", fill=I("blue"), col = I("black"))
